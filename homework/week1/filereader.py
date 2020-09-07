@@ -1,7 +1,8 @@
 import os 
 filepath= os.listdir('./textfiles')
+total_line=0
 for path in filepath:
     content=open('./textfiles/' + path,'r').readlines()
-    linecount=len(content)
+    total_line+=len(content)
     
-    print(path, ": linecount: ",linecount)
+print('Total line count for all files in textfiles:', total_line)   
